@@ -1,6 +1,6 @@
 # Sphero_Force_Band_Python
 
-This code allows you to control the Sphero Force Band programmatically using Python. It utilises the Bleak Library (https://github.com/hbldh/bleak) for Bluetooth LE connectivity. Developed and tested on Linux. Should work
+This code allows you to control the Sphero Force Band, which was offered as an optional accessory to the Sphero BB-8 robot, programmatically, using Python. It utilises the Bleak Library (https://github.com/hbldh/bleak) for Bluetooth LE connectivity. Developed and tested on Linux. Should work
 on Windows and MacOS, too.
 
 It's still very basic and wip, but I plan to extend it as time permits.
@@ -9,23 +9,24 @@ It's still very basic and wip, but I plan to extend it as time permits.
 
 The force band is *very* similar to the Sphero Robots.
 * It's offering the same Bluetooh services and characteristics with the same UUIDs.
-* The package format and protocol is the same ( https://sdk.sphero.com/documentation/api-documents ).
+* The package format and protocol is the same (https://sdk.sphero.com/documentation/api-documents).
 * The device IDs, commands and data payload are (mostly?) the same as for comparable actions of the Sphero Robots.
 
-The many Python libraries and tools for controlling Sphero Robots that exist out there, should mostly also work for the Force Band with some smaller adaptations, including:
-*  Extending the initialization, so Force Band is also identified as a supported device.
-*  Adapting the (mostly older) Sphero Ptyhon code to recent Python versions, removing deprecated statements, updating/replacing outdated libraries etc.
+The many Python libraries and tools for controlling Sphero Robots that exist out there, should mostly also work for the Force Band with some smaller adaptations:
+*  Extending the initialization, so the Force Band is also identified as a supported device.
 *  Figuring out, which devices / commands are supported by the Force Band (still working on that).
 
 # Commands supported
 
-* System mode switch (activity selection mode, mode required for playing audio)
+* System mode switch
+  * Activity selection mode
+  * Mode required for playing audio
 * Playing audio files stored on the device
 * Setting the audio volume
 
 Todo:
 * Reading audio volume
-* Stopping audio before ithas finished playing
+* Stopping audio before it has finished playing
 * Reading battery information
 * Reading sensor (gyroscope, accelerometer, magnetometer?) data
 * Enabling "rumble/force feedback" effect (if at all possible independently of force awareness mode)
@@ -39,13 +40,13 @@ Todo:
 * Enter and manipulate force awareness mode
 * ...
 
-## Installation
-1. Clone the repo
-2. "python -m pip install -r requirements.txt"
+# Installation
+* Clone the repo
+* Install dependencies: asyncio, bleak ("python -m pip install -r requirements.txt")
 
 The code was written and tested in Python 3.12
 
-## Inspirations
+# Inspirations
 The code is based on and inspired from
 * https://github.com/Artucuno/Sphero_Bolt_Bleak/
 * https://github.com/al5681/Sphero_Bolt_Multiplatform_Python_Bleak
