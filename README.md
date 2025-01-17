@@ -47,6 +47,7 @@ The code was written and tested in Python 3.12
 
 ## Inspirations
 The code is based on and inspired from
+* https://github.com/Artucuno/Sphero_Bolt_Bleak/
 * https://github.com/al5681/Sphero_Bolt_Multiplatform_Python_Bleak
 * https://github.com/artificial-intelligence-class/spherov2.py
 * https://sdk.sphero.com/documentation/api-documents
